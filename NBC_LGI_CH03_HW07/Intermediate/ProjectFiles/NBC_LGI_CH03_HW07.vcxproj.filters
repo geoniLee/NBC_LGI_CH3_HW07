@@ -48,6 +48,9 @@
     <ClCompile Include="..\..\Source\NBC_LGI_CH03_HW07\Private\LGIGameMode.cpp">
       <Filter>Source\NBC_LGI_CH03_HW07\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\NBC_LGI_CH03_HW07\Private\LGIPlayerController.cpp">
+      <Filter>Source\NBC_LGI_CH03_HW07\Private</Filter>
+    </ClCompile>
     <Filter Include="Source\NBC_LGI_CH03_HW07\Public">
       <UniqueIdentifier>{804AE4BA-B77A-3FB8-9825-8119CE4AC5E7}</UniqueIdentifier>
     </Filter>
@@ -55,6 +58,9 @@
       <Filter>Source\NBC_LGI_CH03_HW07\Public</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\NBC_LGI_CH03_HW07\Public\LGIGameMode.h">
+      <Filter>Source\NBC_LGI_CH03_HW07\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\NBC_LGI_CH03_HW07\Public\LGIPlayerController.h">
       <Filter>Source\NBC_LGI_CH03_HW07\Public</Filter>
     </ClCompile>
   </ItemGroup>

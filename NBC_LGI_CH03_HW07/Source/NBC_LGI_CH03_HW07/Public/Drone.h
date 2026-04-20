@@ -10,6 +10,7 @@ class UBoxComponent;
 class USkeletalMeshComponent;
 class USpringArmComponent;
 class UCameraComponent;
+struct FInputActionValue;
 
 UCLASS()
 class NBC_LGI_CH03_HW07_API ADrone : public APawn
@@ -21,10 +22,13 @@ public:
 	ADrone();
 
 protected:
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Velocity")
+	float MoveSpeed;
+	FVector2D MoveInput;
+
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
@@ -42,4 +46,13 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Components")
 	UCameraComponent* CameraComp;
+
+	UFUNCTION()
+	void StartMove(const FInputActionValue& value);
+
+	UFUNCTION()
+	void StopMove(const FInputActionValue& value);
+
+	UFUNCTION()
+	void Look(const FInputActionValue& value);
 };

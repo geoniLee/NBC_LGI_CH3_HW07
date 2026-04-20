@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "NBC_LGI_CH03_HW07",
+			"Path": "..\\Source\\NBC_LGI_CH03_HW07.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "NBC_LGI_CH03_HW07Editor",
+			"Path": "..\\Source\\NBC_LGI_CH03_HW07Editor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

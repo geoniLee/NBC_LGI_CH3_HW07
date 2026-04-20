@@ -11,6 +11,7 @@
     <None Include="..\..\Source\NBC_LGI_CH03_HW07Editor.Target.cs">
       <Filter>Source</Filter>
     </None>
+    <None Include="..\..\.vsconfig" />
     <Filter Include="Config">
       <UniqueIdentifier>{FA535FFB-25E1-3D20-B416-52F9BE21E06E}</UniqueIdentifier>
     </Filter>
@@ -37,6 +38,24 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\NBC_LGI_CH03_HW07\NBC_LGI_CH03_HW07.h">
       <Filter>Source\NBC_LGI_CH03_HW07</Filter>
+    </ClCompile>
+    <Filter Include="Source\NBC_LGI_CH03_HW07\Private">
+      <UniqueIdentifier>{0CAD4999-A500-3974-8511-13ED21729FCB}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\NBC_LGI_CH03_HW07\Private\Drone.cpp">
+      <Filter>Source\NBC_LGI_CH03_HW07\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\NBC_LGI_CH03_HW07\Private\LGIGameMode.cpp">
+      <Filter>Source\NBC_LGI_CH03_HW07\Private</Filter>
+    </ClCompile>
+    <Filter Include="Source\NBC_LGI_CH03_HW07\Public">
+      <UniqueIdentifier>{804AE4BA-B77A-3FB8-9825-8119CE4AC5E7}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\NBC_LGI_CH03_HW07\Public\Drone.h">
+      <Filter>Source\NBC_LGI_CH03_HW07\Public</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\NBC_LGI_CH03_HW07\Public\LGIGameMode.h">
+      <Filter>Source\NBC_LGI_CH03_HW07\Public</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

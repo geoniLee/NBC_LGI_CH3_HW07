@@ -43,14 +43,24 @@ struct Z_Construct_UClass_ALGIPlayerController_Statics
 		{ "Category", "Input" },
 		{ "ModuleRelativePath", "Public/LGIPlayerController.h" },
 	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MoveHeightAction_MetaData[] = {
+		{ "Category", "Input" },
+		{ "ModuleRelativePath", "Public/LGIPlayerController.h" },
+	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_LookAction_MetaData[] = {
+		{ "Category", "Input" },
+		{ "ModuleRelativePath", "Public/LGIPlayerController.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_ZoomAction_MetaData[] = {
 		{ "Category", "Input" },
 		{ "ModuleRelativePath", "Public/LGIPlayerController.h" },
 	};
 #endif // WITH_METADATA
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_IMContext;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_MoveAction;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_MoveHeightAction;
 	static const UECodeGen_Private::FObjectPropertyParams NewProp_LookAction;
+	static const UECodeGen_Private::FObjectPropertyParams NewProp_ZoomAction;
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -60,11 +70,15 @@ struct Z_Construct_UClass_ALGIPlayerController_Statics
 };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ALGIPlayerController_Statics::NewProp_IMContext = { "IMContext", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ALGIPlayerController, IMContext), Z_Construct_UClass_UInputMappingContext_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_IMContext_MetaData), NewProp_IMContext_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ALGIPlayerController_Statics::NewProp_MoveAction = { "MoveAction", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ALGIPlayerController, MoveAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MoveAction_MetaData), NewProp_MoveAction_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ALGIPlayerController_Statics::NewProp_MoveHeightAction = { "MoveHeightAction", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ALGIPlayerController, MoveHeightAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_MoveHeightAction_MetaData), NewProp_MoveHeightAction_MetaData) };
 const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ALGIPlayerController_Statics::NewProp_LookAction = { "LookAction", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ALGIPlayerController, LookAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_LookAction_MetaData), NewProp_LookAction_MetaData) };
+const UECodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ALGIPlayerController_Statics::NewProp_ZoomAction = { "ZoomAction", nullptr, (EPropertyFlags)0x0010000000000005, UECodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(ALGIPlayerController, ZoomAction), Z_Construct_UClass_UInputAction_NoRegister, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_ZoomAction_MetaData), NewProp_ZoomAction_MetaData) };
 const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ALGIPlayerController_Statics::PropPointers[] = {
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALGIPlayerController_Statics::NewProp_IMContext,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALGIPlayerController_Statics::NewProp_MoveAction,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALGIPlayerController_Statics::NewProp_MoveHeightAction,
 	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALGIPlayerController_Statics::NewProp_LookAction,
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ALGIPlayerController_Statics::NewProp_ZoomAction,
 };
 static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ALGIPlayerController_Statics::PropPointers) < 2048);
 UObject* (*const Z_Construct_UClass_ALGIPlayerController_Statics::DependentSingletons[])() = {
@@ -107,10 +121,10 @@ ALGIPlayerController::~ALGIPlayerController() {}
 struct Z_CompiledInDeferFile_FID_Users_Administrator_Documents_Unreal_Projects_NBC_LGI_CH03_HW07_NBC_LGI_CH03_HW07_Source_NBC_LGI_CH03_HW07_Public_LGIPlayerController_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ALGIPlayerController, ALGIPlayerController::StaticClass, TEXT("ALGIPlayerController"), &Z_Registration_Info_UClass_ALGIPlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ALGIPlayerController), 2573798900U) },
+		{ Z_Construct_UClass_ALGIPlayerController, ALGIPlayerController::StaticClass, TEXT("ALGIPlayerController"), &Z_Registration_Info_UClass_ALGIPlayerController, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ALGIPlayerController), 881373394U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Administrator_Documents_Unreal_Projects_NBC_LGI_CH03_HW07_NBC_LGI_CH03_HW07_Source_NBC_LGI_CH03_HW07_Public_LGIPlayerController_h_4008165081(TEXT("/Script/NBC_LGI_CH03_HW07"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Administrator_Documents_Unreal_Projects_NBC_LGI_CH03_HW07_NBC_LGI_CH03_HW07_Source_NBC_LGI_CH03_HW07_Public_LGIPlayerController_h_68625663(TEXT("/Script/NBC_LGI_CH03_HW07"),
 	Z_CompiledInDeferFile_FID_Users_Administrator_Documents_Unreal_Projects_NBC_LGI_CH03_HW07_NBC_LGI_CH03_HW07_Source_NBC_LGI_CH03_HW07_Public_LGIPlayerController_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Administrator_Documents_Unreal_Projects_NBC_LGI_CH03_HW07_NBC_LGI_CH03_HW07_Source_NBC_LGI_CH03_HW07_Public_LGIPlayerController_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);

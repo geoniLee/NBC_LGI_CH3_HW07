@@ -23,11 +23,18 @@ public:
 
 protected:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Velocity")
+	// 평면 이동속도
 	float MoveSpeed;
-	FVector2D MoveInput;
 
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
+	// 상하 이동 속도
+	float HeightMoveSpeed;
+	
+	// 최종 가속도
+	float VerticalVelocity;
+	float MaxVelocity;
+	
+	// 지면 여부
+	bool bOnGround;
 
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
@@ -48,11 +55,16 @@ protected:
 	UCameraComponent* CameraComp;
 
 	UFUNCTION()
-	void StartMove(const FInputActionValue& value);
+	void Move(const FInputActionValue& value);
 
 	UFUNCTION()
-	void StopMove(const FInputActionValue& value);
+	void MoveHeight(const FInputActionValue& value);
 
 	UFUNCTION()
 	void Look(const FInputActionValue& value);
+
+	UFUNCTION()
+	void Zoom(const FInputActionValue& value);
+
+	bool CheckGround(FHitResult& Hit);
 };

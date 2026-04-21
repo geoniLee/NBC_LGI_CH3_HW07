@@ -7,7 +7,9 @@
 ALGIPlayerController::ALGIPlayerController()
 	:IMContext(nullptr),
 	MoveAction(nullptr),
-	LookAction(nullptr)
+	MoveHeightAction(nullptr),
+	LookAction(nullptr),
+	ZoomAction(nullptr)
 {
 	
 }

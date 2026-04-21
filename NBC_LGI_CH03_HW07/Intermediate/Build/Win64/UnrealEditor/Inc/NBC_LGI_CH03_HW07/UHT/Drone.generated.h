@@ -16,9 +16,10 @@ struct FInputActionValue;
 #define NBC_LGI_CH03_HW07_Drone_generated_h
 
 #define FID_Users_Administrator_Documents_Unreal_Projects_NBC_LGI_CH03_HW07_NBC_LGI_CH03_HW07_Source_NBC_LGI_CH03_HW07_Public_Drone_h_18_RPC_WRAPPERS_NO_PURE_DECLS \
+	DECLARE_FUNCTION(execZoom); \
 	DECLARE_FUNCTION(execLook); \
-	DECLARE_FUNCTION(execStopMove); \
-	DECLARE_FUNCTION(execStartMove);
+	DECLARE_FUNCTION(execMoveHeight); \
+	DECLARE_FUNCTION(execMove);
 
 
 #define FID_Users_Administrator_Documents_Unreal_Projects_NBC_LGI_CH03_HW07_NBC_LGI_CH03_HW07_Source_NBC_LGI_CH03_HW07_Public_Drone_h_18_INCLASS_NO_PURE_DECLS \

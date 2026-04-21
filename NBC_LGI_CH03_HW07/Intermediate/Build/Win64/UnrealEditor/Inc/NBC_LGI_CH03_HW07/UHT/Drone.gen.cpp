@@ -67,10 +67,10 @@ DEFINE_FUNCTION(ADrone::execLook)
 }
 // End Class ADrone Function Look
 
-// Begin Class ADrone Function StartMove
-struct Z_Construct_UFunction_ADrone_StartMove_Statics
+// Begin Class ADrone Function Move
+struct Z_Construct_UFunction_ADrone_Move_Statics
 {
-	struct Drone_eventStartMove_Parms
+	struct Drone_eventMove_Parms
 	{
 		FInputActionValue value;
 	};
@@ -86,36 +86,36 @@ struct Z_Construct_UFunction_ADrone_StartMove_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ADrone_StartMove_Statics::NewProp_value = { "value", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(Drone_eventStartMove_Parms, value), Z_Construct_UScriptStruct_FInputActionValue, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_value_MetaData), NewProp_value_MetaData) }; // 494646648
-const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ADrone_StartMove_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ADrone_StartMove_Statics::NewProp_value,
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ADrone_Move_Statics::NewProp_value = { "value", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(Drone_eventMove_Parms, value), Z_Construct_UScriptStruct_FInputActionValue, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_value_MetaData), NewProp_value_MetaData) }; // 494646648
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ADrone_Move_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ADrone_Move_Statics::NewProp_value,
 };
-static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ADrone_StartMove_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADrone_StartMove_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ADrone, nullptr, "StartMove", nullptr, nullptr, Z_Construct_UFunction_ADrone_StartMove_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ADrone_StartMove_Statics::PropPointers), sizeof(Z_Construct_UFunction_ADrone_StartMove_Statics::Drone_eventStartMove_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00480401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADrone_StartMove_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADrone_StartMove_Statics::Function_MetaDataParams) };
-static_assert(sizeof(Z_Construct_UFunction_ADrone_StartMove_Statics::Drone_eventStartMove_Parms) < MAX_uint16);
-UFunction* Z_Construct_UFunction_ADrone_StartMove()
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ADrone_Move_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADrone_Move_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ADrone, nullptr, "Move", nullptr, nullptr, Z_Construct_UFunction_ADrone_Move_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ADrone_Move_Statics::PropPointers), sizeof(Z_Construct_UFunction_ADrone_Move_Statics::Drone_eventMove_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00480401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADrone_Move_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADrone_Move_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_ADrone_Move_Statics::Drone_eventMove_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_ADrone_Move()
 {
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ADrone_StartMove_Statics::FuncParams);
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ADrone_Move_Statics::FuncParams);
 	}
 	return ReturnFunction;
 }
-DEFINE_FUNCTION(ADrone::execStartMove)
+DEFINE_FUNCTION(ADrone::execMove)
 {
 	P_GET_STRUCT_REF(FInputActionValue,Z_Param_Out_value);
 	P_FINISH;
 	P_NATIVE_BEGIN;
-	P_THIS->StartMove(Z_Param_Out_value);
+	P_THIS->Move(Z_Param_Out_value);
 	P_NATIVE_END;
 }
-// End Class ADrone Function StartMove
+// End Class ADrone Function Move
 
-// Begin Class ADrone Function StopMove
-struct Z_Construct_UFunction_ADrone_StopMove_Statics
+// Begin Class ADrone Function MoveHeight
+struct Z_Construct_UFunction_ADrone_MoveHeight_Statics
 {
-	struct Drone_eventStopMove_Parms
+	struct Drone_eventMoveHeight_Parms
 	{
 		FInputActionValue value;
 	};
@@ -131,31 +131,76 @@ struct Z_Construct_UFunction_ADrone_StopMove_Statics
 	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
 	static const UECodeGen_Private::FFunctionParams FuncParams;
 };
-const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ADrone_StopMove_Statics::NewProp_value = { "value", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(Drone_eventStopMove_Parms, value), Z_Construct_UScriptStruct_FInputActionValue, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_value_MetaData), NewProp_value_MetaData) }; // 494646648
-const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ADrone_StopMove_Statics::PropPointers[] = {
-	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ADrone_StopMove_Statics::NewProp_value,
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ADrone_MoveHeight_Statics::NewProp_value = { "value", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(Drone_eventMoveHeight_Parms, value), Z_Construct_UScriptStruct_FInputActionValue, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_value_MetaData), NewProp_value_MetaData) }; // 494646648
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ADrone_MoveHeight_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ADrone_MoveHeight_Statics::NewProp_value,
 };
-static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ADrone_StopMove_Statics::PropPointers) < 2048);
-const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADrone_StopMove_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ADrone, nullptr, "StopMove", nullptr, nullptr, Z_Construct_UFunction_ADrone_StopMove_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ADrone_StopMove_Statics::PropPointers), sizeof(Z_Construct_UFunction_ADrone_StopMove_Statics::Drone_eventStopMove_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00480401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADrone_StopMove_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADrone_StopMove_Statics::Function_MetaDataParams) };
-static_assert(sizeof(Z_Construct_UFunction_ADrone_StopMove_Statics::Drone_eventStopMove_Parms) < MAX_uint16);
-UFunction* Z_Construct_UFunction_ADrone_StopMove()
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ADrone_MoveHeight_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADrone_MoveHeight_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ADrone, nullptr, "MoveHeight", nullptr, nullptr, Z_Construct_UFunction_ADrone_MoveHeight_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ADrone_MoveHeight_Statics::PropPointers), sizeof(Z_Construct_UFunction_ADrone_MoveHeight_Statics::Drone_eventMoveHeight_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00480401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADrone_MoveHeight_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADrone_MoveHeight_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_ADrone_MoveHeight_Statics::Drone_eventMoveHeight_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_ADrone_MoveHeight()
 {
 	static UFunction* ReturnFunction = nullptr;
 	if (!ReturnFunction)
 	{
-		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ADrone_StopMove_Statics::FuncParams);
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ADrone_MoveHeight_Statics::FuncParams);
 	}
 	return ReturnFunction;
 }
-DEFINE_FUNCTION(ADrone::execStopMove)
+DEFINE_FUNCTION(ADrone::execMoveHeight)
 {
 	P_GET_STRUCT_REF(FInputActionValue,Z_Param_Out_value);
 	P_FINISH;
 	P_NATIVE_BEGIN;
-	P_THIS->StopMove(Z_Param_Out_value);
+	P_THIS->MoveHeight(Z_Param_Out_value);
 	P_NATIVE_END;
 }
-// End Class ADrone Function StopMove
+// End Class ADrone Function MoveHeight
+
+// Begin Class ADrone Function Zoom
+struct Z_Construct_UFunction_ADrone_Zoom_Statics
+{
+	struct Drone_eventZoom_Parms
+	{
+		FInputActionValue value;
+	};
+#if WITH_METADATA
+	static constexpr UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "Public/Drone.h" },
+	};
+	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_value_MetaData[] = {
+		{ "NativeConst", "" },
+	};
+#endif // WITH_METADATA
+	static const UECodeGen_Private::FStructPropertyParams NewProp_value;
+	static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+	static const UECodeGen_Private::FFunctionParams FuncParams;
+};
+const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ADrone_Zoom_Statics::NewProp_value = { "value", nullptr, (EPropertyFlags)0x0010000008000182, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(Drone_eventZoom_Parms, value), Z_Construct_UScriptStruct_FInputActionValue, METADATA_PARAMS(UE_ARRAY_COUNT(NewProp_value_MetaData), NewProp_value_MetaData) }; // 494646648
+const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ADrone_Zoom_Statics::PropPointers[] = {
+	(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ADrone_Zoom_Statics::NewProp_value,
+};
+static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ADrone_Zoom_Statics::PropPointers) < 2048);
+const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ADrone_Zoom_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ADrone, nullptr, "Zoom", nullptr, nullptr, Z_Construct_UFunction_ADrone_Zoom_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ADrone_Zoom_Statics::PropPointers), sizeof(Z_Construct_UFunction_ADrone_Zoom_Statics::Drone_eventZoom_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00480401, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ADrone_Zoom_Statics::Function_MetaDataParams), Z_Construct_UFunction_ADrone_Zoom_Statics::Function_MetaDataParams) };
+static_assert(sizeof(Z_Construct_UFunction_ADrone_Zoom_Statics::Drone_eventZoom_Parms) < MAX_uint16);
+UFunction* Z_Construct_UFunction_ADrone_Zoom()
+{
+	static UFunction* ReturnFunction = nullptr;
+	if (!ReturnFunction)
+	{
+		UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ADrone_Zoom_Statics::FuncParams);
+	}
+	return ReturnFunction;
+}
+DEFINE_FUNCTION(ADrone::execZoom)
+{
+	P_GET_STRUCT_REF(FInputActionValue,Z_Param_Out_value);
+	P_FINISH;
+	P_NATIVE_BEGIN;
+	P_THIS->Zoom(Z_Param_Out_value);
+	P_NATIVE_END;
+}
+// End Class ADrone Function Zoom
 
 // Begin Class ADrone
 void ADrone::StaticRegisterNativesADrone()
@@ -163,8 +208,9 @@ void ADrone::StaticRegisterNativesADrone()
 	UClass* Class = ADrone::StaticClass();
 	static const FNameNativePtrPair Funcs[] = {
 		{ "Look", &ADrone::execLook },
-		{ "StartMove", &ADrone::execStartMove },
-		{ "StopMove", &ADrone::execStopMove },
+		{ "Move", &ADrone::execMove },
+		{ "MoveHeight", &ADrone::execMoveHeight },
+		{ "Zoom", &ADrone::execZoom },
 	};
 	FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 }
@@ -183,7 +229,13 @@ struct Z_Construct_UClass_ADrone_Statics
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_MoveSpeed_MetaData[] = {
 		{ "Category", "Velocity" },
+#if !UE_BUILD_SHIPPING
+		{ "Comment", "// \xed\x8f\x89\xeb\xa9\xb4 \xec\x9d\xb4\xeb\x8f\x99\xec\x86\x8d\xeb\x8f\x84\n" },
+#endif
 		{ "ModuleRelativePath", "Public/Drone.h" },
+#if !UE_BUILD_SHIPPING
+		{ "ToolTip", "\xed\x8f\x89\xeb\xa9\xb4 \xec\x9d\xb4\xeb\x8f\x99\xec\x86\x8d\xeb\x8f\x84" },
+#endif
 	};
 	static constexpr UECodeGen_Private::FMetaDataPairParam NewProp_BoxComp_MetaData[] = {
 		{ "Category", "Components" },
@@ -215,8 +267,9 @@ struct Z_Construct_UClass_ADrone_Statics
 	static UObject* (*const DependentSingletons[])();
 	static constexpr FClassFunctionLinkInfo FuncInfo[] = {
 		{ &Z_Construct_UFunction_ADrone_Look, "Look" }, // 985789484
-		{ &Z_Construct_UFunction_ADrone_StartMove, "StartMove" }, // 2515660336
-		{ &Z_Construct_UFunction_ADrone_StopMove, "StopMove" }, // 3959454190
+		{ &Z_Construct_UFunction_ADrone_Move, "Move" }, // 420183323
+		{ &Z_Construct_UFunction_ADrone_MoveHeight, "MoveHeight" }, // 3973586329
+		{ &Z_Construct_UFunction_ADrone_Zoom, "Zoom" }, // 2891857346
 	};
 	static_assert(UE_ARRAY_COUNT(FuncInfo) < 2048);
 	static constexpr FCppClassTypeInfoStatic StaticCppClassTypeInfo = {
@@ -277,10 +330,10 @@ ADrone::~ADrone() {}
 struct Z_CompiledInDeferFile_FID_Users_Administrator_Documents_Unreal_Projects_NBC_LGI_CH03_HW07_NBC_LGI_CH03_HW07_Source_NBC_LGI_CH03_HW07_Public_Drone_h_Statics
 {
 	static constexpr FClassRegisterCompiledInInfo ClassInfo[] = {
-		{ Z_Construct_UClass_ADrone, ADrone::StaticClass, TEXT("ADrone"), &Z_Registration_Info_UClass_ADrone, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADrone), 1457434517U) },
+		{ Z_Construct_UClass_ADrone, ADrone::StaticClass, TEXT("ADrone"), &Z_Registration_Info_UClass_ADrone, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ADrone), 1858666925U) },
 	};
 };
-static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Administrator_Documents_Unreal_Projects_NBC_LGI_CH03_HW07_NBC_LGI_CH03_HW07_Source_NBC_LGI_CH03_HW07_Public_Drone_h_2281390089(TEXT("/Script/NBC_LGI_CH03_HW07"),
+static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Users_Administrator_Documents_Unreal_Projects_NBC_LGI_CH03_HW07_NBC_LGI_CH03_HW07_Source_NBC_LGI_CH03_HW07_Public_Drone_h_527136144(TEXT("/Script/NBC_LGI_CH03_HW07"),
 	Z_CompiledInDeferFile_FID_Users_Administrator_Documents_Unreal_Projects_NBC_LGI_CH03_HW07_NBC_LGI_CH03_HW07_Source_NBC_LGI_CH03_HW07_Public_Drone_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Users_Administrator_Documents_Unreal_Projects_NBC_LGI_CH03_HW07_NBC_LGI_CH03_HW07_Source_NBC_LGI_CH03_HW07_Public_Drone_h_Statics::ClassInfo),
 	nullptr, 0,
 	nullptr, 0);
